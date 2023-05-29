@@ -1,0 +1,458 @@
+* {
+
+  padding: 0;
+
+  margin: 0;
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  width: 100vw;
+
+  height: 100vh;
+
+  overflow: hidden;
+
+}
+
+.background {
+
+  z-index: -1;
+
+  width: 200vw;
+
+  height: 200vh;
+
+  position: fixed;
+
+  top: -50%;
+
+  left: -50%;
+
+  background-size: 20%;
+
+  transform: rotate(20deg);
+
+  animation: 800s bbg linear infinite;
+
+  background-image: url("/img/bbg.jpg");
+
+}
+
+@keyframes bbg {
+
+  0% {
+
+    background-position: 0% 1000%;
+
+  }
+
+  100% {
+
+    background-position: 0% 0%;
+
+  }
+
+}
+
+#top_bar {
+
+  background-color: #a92178a1;
+
+  text-transform: uppercase;
+
+  text-align: center;
+
+  padding: 5px;
+
+  margin: 5px;
+
+  border-radius: 10px;
+
+}
+
+#menu {
+
+  border-top: 2px solid #9338bd;
+
+  overflow: hidden;
+
+}
+
+#menu i {
+
+  width: 30px;
+
+  height: 30px;
+
+  padding: 3px;
+
+  margin: 3px;
+
+  border: 2px solid;
+
+}
+
+#main_div {
+
+  height: 70%;
+
+  margin: 5px;
+
+  display: flex;
+
+  align-items: center;
+
+  flex-direction: column;
+
+  background-color: #175b82a9;
+
+  background-size: contain;
+
+}
+
+.section {
+
+  width: 95%;
+
+  height: 30%;
+
+  margin: 5px;
+
+  display: flex;
+
+  overflow: hidden;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: #112961a3;
+
+}
+
+.section .sub_section {
+
+  width: 33.3%;
+
+  height: 90%;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  background-color: #214fb7c3;
+
+}
+
+.section .mode {
+
+  width: 30%;
+
+  height: 90%;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: #1f4bb0bb;
+
+}
+
+.bgopt_cont div {
+
+  padding: 3px;
+
+  width: 95%;
+
+  border: 2px solid #153172;
+
+}
+
+.bgopt_cont input {
+
+  float: right;
+
+}
+
+.sub_section img {
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+.mode img {
+
+  width: 100%;
+
+  height: 100%;
+
+}
+
+.sub_section .go_btn {
+
+  width: 90%;
+
+  height: 80%;
+
+  border: none;
+
+  font-size: 35px;
+
+  border-radius: 50%;
+
+}
+
+.brawler_list button {
+
+  width: 95%;
+
+  padding: 3px;
+
+  border-radius: 15px;
+
+  border: 2px solid #153172;
+
+}
+
+.section table {
+
+  width: 50%;
+
+  height: 95%;
+
+  color: #0adf1fbb;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  text-transform: capitalize;
+
+}
+
+#brawlers_outer_div {
+
+  top: 0;
+
+  left: 0;
+
+  width: 100vw;
+
+  height: 100vh;
+
+  z-index: 1000;
+
+  display: none;
+
+  position: absolute;
+
+  align-items: center;
+
+  justify-content: center;
+
+  backdrop-filter: brightness(70%);
+
+}
+
+#brawler_list_cont {
+
+  width: 90vw;
+
+  height: 60vh;
+
+  overflow: scroll;
+
+  align-items: center;
+
+  background-size: cover;
+
+  justify-content: center;
+
+  border: 1vw double #2722ee;
+
+  background-image: url("/img/6bg.jpeg");
+
+}
+
+#brawler_list_cont button {
+
+  top: 0;
+
+  left: 0;
+
+  position: sticky;
+
+  margin: 1.5vw;
+
+  width: 85vw;
+
+  height: 5vh;
+
+}
+
+#brawler_list_cont .sel_img {
+
+  margin: 0.5vw;
+
+  width: 28vw;
+
+  height: 28vw;
+
+  overflow: scroll;
+
+  border: 1vw solid blue;
+
+  background-size: cover;
+
+}
+
+#brawler_list_cont .apply_sel_img {
+
+  border: 1vw solid #29e22e !important;
+
+}
+
+#side_bar_cont {
+
+  top: 0;
+
+  left: 0;
+
+  /*position: fixed;*/
+
+  perspective: 500px;
+
+  perspective-origin: center;
+
+}
+
+#side_bar_cont > #side_bar {
+
+  height: 100vh;
+
+  padding-bottom: 50vh;
+
+  transition: 1s;
+
+  position: fixed;
+
+  overflow: scroll;
+
+  transform-origin: left;
+
+  background-color: #161b1b;
+
+  transform: rotateY(180deg);
+
+}
+
+#side_bar > ul {
+
+  margin: 15px;
+
+}
+
+#side_bar .side_bar_close_btn {
+
+  top: 0;
+
+  left: 0;
+
+  margin: 5px;
+
+  padding: 5px;
+
+  display: block;
+
+  position: sticky;
+
+  text-align: center;
+
+  background-color: #1fd524;
+
+}
+
+#side_bar > ul > li {
+
+  transition: 0.5s;
+
+  padding: 17px;
+
+  color: #24599d;
+
+  list-style: none;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  font-size: 20px;
+
+  text-transform: uppercase;
+
+  border-bottom: 3px solid #000000;
+
+}
+
+#rarity_dropdown ul {
+
+  transition: 0.5s;
+
+  height: 0;
+
+  margin: 10px;
+
+  color: #213a85;
+
+  font-size: 17px;
+
+  list-style: none;
+
+  overflow: hidden;
+
+  padding-left: 30px;
+
+  border-left: 2px solid #9290eb;
+
+}
+
+#rarity_dropdown ul li {
+
+  padding: 10px;
+
+}
+
+#rarity_dropdown ul li a {
+
+}
+
+#side_bar li:hover {
+
+  color: #161b1b;
+
+  background-color: #24599d;
+
+}
+
+#rarity_dropdown:hover ul {
+
+  height: 290px;
+
+}
+
