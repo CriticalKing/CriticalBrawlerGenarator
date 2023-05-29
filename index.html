@@ -1,0 +1,454 @@
+<!--Created By:- Critical King-BS;
+
+▼▼ version:- 0.0.1 ▼▼
+
+Created By:- Critical King-BS
+
+update:- 1.0.2;
+
+  •>> new features
+
+    • Options for background change(bug)
+
+    • rarity based options is now available(bug)
+
+    • selectable brawler list is now available(not working)
+
+    • new sidebar
+
+ 
+
+update:- 1.31.4
+
+  •>> animation
+
+    • new animation for sidebar
+
+    • new hover effect for sidebar content
+
+  •>> bug
+
+    • rarity based options are now fixed
+
+update:- 3.6.81
+
+  •>> Interactive Background
+
+    • new interactive background is now added(available for body)
+
+    • new interactive background for selectable brawler list will available in next update
+
+  •>> animations
+
+    • animation added to brawler selection-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Brawl Stars Brawler Generator</title>
+
+    <script
+
+      src="https://kit.fontawesome.com/403d6c803d.js"
+
+      crossorigin="anonymous"
+
+    ></script>
+
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+
+  </head>
+
+  <body>
+
+    <div class="background"></div>
+
+    <header id="top_bar">
+
+      <h2>Brawl Stars Brawler Generator</h2>
+
+      <div id="menu">
+
+        <i class="fa-solid fa-bars" style="float: left"></i>
+
+        <i class="fa-solid fa-home" style="float: left"></i>
+
+        <i class="fa-solid fa-palette" style="float: right"></i>
+
+      </div>
+
+      <!--Menu bar-->
+
+      <nav id="side_bar_cont">
+
+        <div id="side_bar">
+
+          <p class="side_bar_close_btn">✖️</p>
+
+          <ul>
+
+            <li><a href="#">Home</a></li>
+
+            <li id="rarity_dropdown">
+
+              <a href="#">Rarity</a>
+
+              <ul>
+
+                <li>
+
+                  <input
+
+                    type="radio"
+
+                    name="brawlers"
+
+                    id="rare"
+
+                    value="0"
+
+                  /><label for="rare">Rare</label>
+
+                </li>
+
+                <li>
+
+                  <input
+
+                    type="radio"
+
+                    name="brawlers"
+
+                    id="super_rare"
+
+                    value="1"
+
+                  /><label for="super_rare">Super Rare</label>
+
+                </li>
+
+                <li>
+
+                  <input
+
+                    type="radio"
+
+                    name="brawlers"
+
+                    id="epic"
+
+                    value="2"
+
+                  /><label for="epic">Epic</label>
+
+                </li>
+
+                <li>
+
+                  <input
+
+                    type="radio"
+
+                    name="brawlers"
+
+                    id="mythic"
+
+                    value="3"
+
+                  /><label for="mythic">Mythic</label>
+
+                </li>
+
+                <li>
+
+                  <input
+
+                    type="radio"
+
+                    name="brawlers"
+
+                    id="legendary"
+
+                    value="4"
+
+                  /><label for="legendary">Legendary</label>
+
+                </li>
+
+                <li>
+
+                  <input
+
+                    type="radio"
+
+                    name="brawlers"
+
+                    id="chromatic"
+
+                    value="5"
+
+                  /><label for="chromatic">Chromatic</label>
+
+                </li>
+
+              </ul>
+
+            </li>
+
+            <li><a href="#">Mode</a></li>
+
+            <li><a href="#">Other</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li><a href="#">Info</a></li>
+
+          </ul>
+
+        </div>
+
+      </nav>
+
+    </header>
+
+    <!--main div start-->
+
+    <div id="main_div">
+
+      <!--section div start-->
+
+      <div class="section">
+
+        <div class="sub_section">
+
+          <img
+
+            id="img1"
+
+            style="float: left"
+
+            src="img/6bg.jpeg"
+
+            alt="Brawler's photo"
+
+          />
+
+        </div>
+
+        <div class="mode">
+
+          <img id="img2" src="img/2bg.jpeg" alt="" />
+
+        </div>
+
+        <div class="sub_section">
+
+          <img id="img3" style="float: right" src="img/6bg.jpeg" alt="" />
+
+        </div>
+
+      </div>
+
+      <!--section div closed-->
+
+      <!--section div start-->
+
+      <div class="section">
+
+        <div class="sub_section bgopt_cont">
+
+          <div>
+
+            Bg 1<input
+
+              oninput="ch_bg('3bg')"
+
+              type="radio"
+
+              name="bg"
+
+              id="Background1"
+
+            />
+
+          </div>
+
+          <div>
+
+            Bg 2<input
+
+              oninput="ch_bg('4bg')"
+
+              type="radio"
+
+              name="bg"
+
+              id="Background2"
+
+            />
+
+          </div>
+
+          <div>
+
+            Bg 3<input
+
+              oninput="ch_bg('5bg')"
+
+              type="radio"
+
+              name="bg"
+
+              id="Background3"
+
+            />
+
+          </div>
+
+          <div>
+
+            Bg 4<input
+
+              oninput="ch_bg('6bg')"
+
+              type="radio"
+
+              name="bg"
+
+              id="Background4"
+
+            />
+
+          </div>
+
+        </div>
+
+        <div class="sub_section">
+
+          <button class="go_btn" type="button">Go...</button>
+
+        </div>
+
+        <div class="sub_section brawler_list">
+
+          <button id="select_brawlers_btn" type="button">
+
+            Select Brawlers
+
+          </button>
+
+        </div>
+
+      </div>
+
+      <!--section div closed-->
+
+      <!--section div start-->
+
+      <div class="section">
+
+        <table border="2">
+
+          <tr>
+
+            <td colspan="2">Brawler Information</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Name</td>
+
+            <td id="name">???</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Rarity</td>
+
+            <td id="rarity">???</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Category</td>
+
+            <td id="category">???</td>
+
+          </tr>
+
+        </table>
+
+        <table border="2">
+
+          <tr>
+
+            <td colspan="2">Brawler Information</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Name</td>
+
+            <td id="name2">???</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Rarity</td>
+
+            <td id="rarity2">???</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Category</td>
+
+            <td id="category2">???</td>
+
+          </tr>
+
+        </table>
+
+      </div>
+
+      <!--section div closed-->
+
+    </div>
+
+    <!--main div closed-->
+
+    <!--Brawlers list containers-->
+
+    <div id="brawlers_outer_div">
+
+      <div id="brawler_list_cont">
+
+        <button id="brawler_list_apply_btn">Apply</button>
+
+        <button id="cls_btn" type="button">CLOSE</button>
+
+      </div>
+
+    </div>
+
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
+
+  </body>
+
+</html>
+
